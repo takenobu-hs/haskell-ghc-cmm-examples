@@ -1,0 +1,5 @@
+
+proc ( bits64 arg )             // a call argument
+{
+    return ( arg + 123 );
+}

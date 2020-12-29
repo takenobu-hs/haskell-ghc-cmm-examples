@@ -1,0 +1,5 @@
+
+proc ( )
+{
+    return ( 1234 );        // return with a return value
+}
