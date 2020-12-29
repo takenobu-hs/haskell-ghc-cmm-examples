@@ -1,0 +1,5 @@
+
+proc ( bits64 arg1, bits64 arg2, bits64 arg3 )      // call arguments
+{
+    return ( arg1 + arg2 + arg3 );
+}
