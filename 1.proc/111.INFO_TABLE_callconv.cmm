@@ -1,0 +1,6 @@
+
+INFO_TABLE(abc, 1, 0, 2, "ijk", "xyz")
+    (gcptr arg)                             // NativeNodeCall convention
+{
+    return (arg);
+}
