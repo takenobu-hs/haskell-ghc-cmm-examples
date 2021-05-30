@@ -1,5 +1,24 @@
 
 
+OUTDIR := generated-asm
+
+TARGETS := $(addprefix $(OUTDIR)/,$(subst .cmm,.asm,$(wildcard *.cmm)))
+
+echo:
+	echo $(TARGETS)
+
+all: $(TARGETS)
+
+
+%.asm : ../%.cmm
+	ghc $(GHCFLAGS) $(GHCINC) -c -ddump-asm    $^ >  $*.asm
+
+
+$(OUTDIR)/%.asm : %.cmm
+	ghc $(GHCFLAGS) $(GHCINC) -c -ddump-asm    $^ >  $(OUTDIR)/$*.asm
+	rm -f $*.hi $*.o
+
+
 #------------------------------------------------------------------------
 #  flag
 #------------------------------------------------------------------------
