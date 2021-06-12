@@ -1,0 +1,11 @@
+
+func1()
+{
+
+    Hp = Hp + 16;               // Hp global register
+    Sp = Sp + 8;                // Sp global register
+
+    R1 = Hp + Sp;
+
+    return(R1);
+}

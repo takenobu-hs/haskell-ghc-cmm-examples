@@ -1,0 +1,8 @@
+
+func1()
+{
+
+    R1 = %neg(R1);          // `neg` built-in primitive
+
+    return(R1);
+}
