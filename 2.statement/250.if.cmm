@@ -2,7 +2,7 @@
 func1()
 {
 
-    if (R1 > R2) {
+    if (R1 > R2) {              // if statement
         R1 = 111;
     } else {
         R1 = 100;

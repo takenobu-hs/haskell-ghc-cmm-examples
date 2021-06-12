@@ -2,8 +2,8 @@
 func1()
 {
 
-    if (R1 > R2) (likely: True) {
-//  if (R1 > R2) (likely: False) {
+    if (R1 > R2) (likely: True) {       // likely condition
+//  if (R1 > R2) (likely: False) {      // likely condition
         R1 = 111;
     } else {
         R1 = 100;

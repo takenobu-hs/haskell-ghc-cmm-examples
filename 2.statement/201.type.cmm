@@ -1,7 +1,7 @@
 
 func1()
 {
-    bits64 alpha;
+    bits64 alpha;               // declaration of type and variable
 
     alpha = 0x100;
 
