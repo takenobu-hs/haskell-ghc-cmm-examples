@@ -1,0 +1,13 @@
+
+func1()
+{
+
+    if (R1 > R2) (likely: True) {
+//  if (R1 > R2) (likely: False) {
+        R1 = 111;
+    } else {
+        R1 = 100;
+    }
+
+    return(R1);
+}
