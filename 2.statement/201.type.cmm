@@ -1,0 +1,10 @@
+
+func1()
+{
+    bits64 alpha;
+
+    alpha = 0x100;
+
+    return(alpha);
+}
+

@@ -1,0 +1,7 @@
+
+func1()
+{
+    R1 = 0x100;                 // assign a value
+
+    return(R1);
+}
