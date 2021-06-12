@@ -1,5 +1,9 @@
-# haskell-ghc-cmm-examples
-Haskell GHC Cmm examples
+<p align="left"><img src="https://takenobu-hs.github.io/downloads/images/haskell-logo-s.png"/></p>
+
+Haskell/GHC Cmm examples
+========================
+
+This is an example collection for Haskell GHC's Cmm.
 
 
 ### References
