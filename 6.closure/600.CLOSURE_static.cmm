@@ -1,0 +1,7 @@
+
+section "data"
+{
+ xxx:
+    CLOSURE(yyy, zzz)               // declare of static CLOSURE
+
+}
