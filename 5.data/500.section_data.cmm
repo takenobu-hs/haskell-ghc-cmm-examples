@@ -1,0 +1,6 @@
+
+section "data"
+{
+    label1:                                 // label
+        bits8[] "hello world";              // type value
+}

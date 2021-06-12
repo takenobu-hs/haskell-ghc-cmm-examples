@@ -1,0 +1,6 @@
+
+section "data"
+{
+    label1:
+      bits64[8];                    // array
+}

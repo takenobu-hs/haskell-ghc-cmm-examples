@@ -1,0 +1,7 @@
+
+section "data"
+{
+    label1:
+        bits64 10::bits64;          // initial value
+}
+
