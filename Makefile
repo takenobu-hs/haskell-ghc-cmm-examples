@@ -22,7 +22,7 @@ $(OUTDIR)/%.asm : %.cmm
 #------------------------------------------------------------------------
 #  flag
 #------------------------------------------------------------------------
-GHCFLAGS=-O -fforce-recomp
+GHCFLAGS=-O -fforce-recomp -v0
 #GHCTHREADED=-rtsopts -threaded
 
 GHCINC=-I$(shell ghc --print-libdir)/includes
