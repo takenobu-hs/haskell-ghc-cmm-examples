@@ -1,47 +1,34 @@
 
+# Makefile for GHC's Cmm
 
-OUTDIR := generated-asm
 
+#------------------------------------------------------------------------
+#  flags
+#------------------------------------------------------------------------
+GHCFLAGS := -O -fforce-recomp -v0
+GHCINC   := -I$(shell ghc --print-libdir)/includes
+
+OUTDIR  := generated-asm
 TARGETS := $(addprefix $(OUTDIR)/,$(subst .cmm,.asm,$(wildcard *.cmm)))
 
-echo:
-	echo $(TARGETS)
+
+
+#------------------------------------------------------------------------
+#  targets
+#------------------------------------------------------------------------
+default:
+	@ echo "need target"
+
 
 all: $(TARGETS)
-
-
-%.asm : ../%.cmm
-	ghc $(GHCFLAGS) $(GHCINC) -c -ddump-asm    $^ >  $*.asm
-
 
 $(OUTDIR)/%.asm : %.cmm
 	ghc $(GHCFLAGS) $(GHCINC) -c -ddump-asm    $^ >  $(OUTDIR)/$*.asm
 	rm -f $*.hi $*.o
 
-
-#------------------------------------------------------------------------
-#  flag
-#------------------------------------------------------------------------
-GHCFLAGS=-O -fforce-recomp -v0
-#GHCTHREADED=-rtsopts -threaded
-
-GHCINC=-I$(shell ghc --print-libdir)/includes
-
-
-default:
-	@ echo "need target"
-
-
-#------------------------------------------------------------------------
-#  dump intermidiate
-#------------------------------------------------------------------------
-.PRECIOUS: %.parsed %.rn %.ds %.simple %.prep %.stg %.cmm %.opt.cmm %.asm
-%.dumps : %.parsed %.rn %.ds %.simple %.prep %.stg %.cmm %.opt.cmm %.disas
-	@ echo "generated"
-
-
 %.asm : %.cmm
 	ghc $(GHCFLAGS) $(GHCINC) -c -ddump-asm    $^ >  $*.asm
+
 
 
 #------------------------------------------------------------------------
